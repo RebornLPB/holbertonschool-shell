@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt | head -n 11
+find . -type f -printf '%T+ %p\n' | sort -r | head -n 10
