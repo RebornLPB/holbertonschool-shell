@@ -1,44 +1,44 @@
 # Shell - Basics
 
-Ce projet marque l'introduction au système d'exploitation Unix et à la manipulation de la ligne de commande via le Shell (Bash). L'objectif est de comprendre l'environnement de l'interprète de commandes, de naviguer dans le système de fichiers et de maîtriser les manipulations de base des fichiers et répertoires.
+This project serves as an introduction to the Unix operating system and command-line manipulation using the Shell (Bash). The primary objective is to understand the command interpreter environment, navigate the Unix file system structure, and master foundational file and directory manipulations.
 
-## 📝 Concepts Clés
+## 📝 Key Concepts
 
-* **Navigation :** Déplacement fluide dans l'arborescence des fichiers Unix (chemins absolus vs. relatifs).
-* **Gestion des Fichiers :** Création, suppression, copie, déplacement et renommage de fichiers et de répertoires.
-* **Permissions & Visualisation :** Lecture du contenu des fichiers et compréhension des métadonnées de base via le terminal.
+* **Navigation:** Fluidly moving through the Unix directory tree using absolute vs. relative paths.
+* **File Management:** Creating, deleting, copying, moving, and renaming files and directories.
+* **Permissions & Inspection:** Viewing file contents and understanding basic metadata directly from the terminal.
 
-## 🛠️ Spécifications et Contraintes
+## 🛠️ Specifications and Constraints
 
-* **Interprète de commandes :** Tous les scripts sont écrits pour `bash` et testés sur Ubuntu 20.04 LTS.
-* **Format des Scripts :** * Tous les fichiers doivent se terminer par une nouvelle ligne.
-  * La première ligne de chaque fichier doit contenir exactement le Shebang : `#!/bin/bash`.
-  * Les scripts doivent être fonctionnels et ne pas contenir de texte superflu non exécutable.
-* **Exécutabilité :** Tous les fichiers doivent être rendus exécutables via la commande `chmod u+x`.
+* **Command Interpreter:** All scripts are written for `bash` and tested/validated on Ubuntu 20.04 LTS.
+* **Script Formatting:** * All files must end with a new line.
+  * The first line of every file must contain exactly the shebang: `#!/bin/bash`.
+  * Scripts must be fully functional and free of unnecessary non-executable text.
+* **Executability:** All files must be made executable using the `chmod u+x` command.
 
-## 📁 Liste des Fichiers & Tâches
+## 📁 File List & Tasks
 
-| Fichier | Commande Principale | Description |
+| File | Core Command | Description |
 | :--- | :--- | :--- |
-| `0-current_working_directory` | `pwd` | Affiche le chemin absolu du répertoire de travail actuel. |
-| `1-listit` | `ls` | Affiche le contenu du répertoire courant. |
-| `2-change_directory` | `cd` | Modifie le répertoire de travail pour aller dans le répertoire personnel de l'utilisateur (`~`). |
-| `3-listfiles` | `ls -l` | Affiche le contenu du répertoire courant au format long (détails des permissions/tailles). |
-| `4-listallfiles` | `ls -la` | Affiche tout le contenu du répertoire courant, y compris les fichiers cachés (commençant par `.`). |
-| `5-listfilesdigitonly` | `ls -laN` ou variant | Affiche le contenu du répertoire courant avec les IDs d'utilisateur et de groupe au format numérique. |
-| `6-firstdirectory` | `mkdir` | Crée un répertoire nommé `my_first_directory` dans le dossier `/tmp/`. |
-| `7-movetmp` | `mv` | Déplace un fichier spécifique du répertoire courant vers le dossier `/tmp/`. |
-| `8-firstdelete` | `rm` | Supprime un fichier spécifique situé dans le répertoire courant. |
-| `9-firstdirdeletion` | `rmdir` ou `rm -r` | Supprime un répertoire spécifique situé dans le dossier `/tmp/`. |
-| `10-back` | `cd -` | Change le répertoire de travail pour revenir au répertoire précédent. |
-| `11-lists` | `ls` pluriel | Liste les fichiers du répertoire courant, du répertoire parent, et du répertoire `/boot` simultanément. |
-| `12-file_type` | `file` | Affiche le type d'un fichier donné (ex: texte, exécutable, répertoire). |
-| `13-symbolic_link` | `ln -s` | Crée un lien symbolique vers un fichier ciblé. |
-| `14-copy_html` | `cp` | Copie tous les fichiers HTML du répertoire de travail actuel vers le répertoire parent, uniquement s'ils n'existent pas ou sont plus récents. |
+| `0-current_working_directory` | `pwd` | Prints the absolute path of the current working directory. |
+| `1-listit` | `ls` | Lists the contents of the current working directory. |
+| `2-change_directory` | `cd` | Changes the working directory to the user's home directory (`~`). |
+| `3-listfiles` | `ls -l` | Lists the contents of the current directory in long format (showing permissions, sizes, etc.). |
+| `4-listallfiles` | `ls -la` | Lists all contents of the current directory, including hidden files (starting with `.`). |
+| `5-listfilesdigitonly` | `ls -laN` or variant | Lists the contents of the current directory showing user and group IDs numerically. |
+| `6-firstdirectory` | `mkdir` | Creates a directory named `my_first_directory` inside the `/tmp/` folder. |
+| `7-movetmp` | `mv` | Moves a specific file from the current directory into the `/tmp/` folder. |
+| `8-firstdelete` | `rm` | Deletes a specific file located in the current directory. |
+| `9-firstdirdeletion` | `rmdir` or `rm -r` | Deletes a specific directory located inside the `/tmp/` folder. |
+| `10-back` | `cd -` | Changes the working directory back to the previously occupied directory. |
+| `11-lists` | Multiple `ls` | Lists the files in the current directory, the parent directory, and the `/boot` directory simultaneously. |
+| `12-file_type` | `file` | Prints the type of a given file (e.g., ASCII text, executable, directory). |
+| `13-symbolic_link` | `ln -s` | Creates a symbolic link pointing to a targeted file. |
+| `14-copy_html` | `cp` | Copies all HTML files from the current working directory to the parent directory, only if they do not exist or are newer. |
 
-## 🚀 Utilisation
+## 🚀 Usage
 
-Pour rendre un script exécutable et le lancer :
+To make a script executable and run it:
 
 ```bash
 chmod u+x 0-current_working_directory

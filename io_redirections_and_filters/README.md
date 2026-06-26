@@ -1,51 +1,51 @@
 # Shell - I/O Redirections and Filters
 
-Ce projet est dédié à la maîtrise des entrées/sorties standards sous Unix, des mécanismes de redirection (`>`, `>>`, `<`, `|`) et de l'utilisation des filtres de texte en ligne de commande. L'objectif est d'apprendre à chaîner des commandes simples pour effectuer des traitements de données complexes et manipuler des fichiers efficacement.
+This project is dedicated to mastering standard inputs and outputs in Unix, redirection mechanisms (`>`, `>>`, `<`, `|`), and utilizing command-line text filters. The objective is to learn how to chain simple commands together to perform complex data processing and manipulate files efficiently.
 
-## 📝 Concepts Clés
+## 📝 Key Concepts
 
-* **Flux Standards :** Compréhension de l'Entrée standard (`stdin` - descripteur 0), la Sortie standard (`stdout` - descripteur 1) et la Sortie d'erreur standard (`stderr` - descripteur 2).
-* **Redirections :** Rediriger la sortie d'une commande vers un fichier (écrasement ou ajout) ou lire l'entrée depuis un fichier.
-* **Pipelines (`|`) :** Connecter la sortie standard d'une commande directement à l'entrée standard d'une autre commande.
-* **Filtres & Commandes Textes :** Utilisation de commandes fondamentales comme `head`, `tail`, `cat`, `grep`, `sed`, `sort`, `uniq`, `wc`, et `tr`.
+* **Standard Streams:** Understanding Standard Input (`stdin` - descriptor 0), Standard Output (`stdout` - descriptor 1), and Standard Error (`stderr` - descriptor 2).
+* **Redirections:** Redirecting the output of a command to a file (overwriting or appending) or reading input from a file.
+* **Pipelines (`|`):** Connecting the standard output of one command directly to the standard input of another command.
+* **Filters & Text Commands:** Utilizing foundational commands such as `head`, `tail`, `cat`, `grep`, `sed`, `sort`, `uniq`, `wc`, and `tr`.
 
-## 🛠️ Spécifications et Contraintes
+## 🛠️ Specifications and Constraints
 
-* **Interprète :** Scripts écrits exclusivement pour `bash` (testés sur Ubuntu 20.04 LTS).
-* **Format :** Shebang `#!/bin/bash` requis sur la première ligne, fin de fichier par une nouvelle ligne.
-* **Exécutabilité :** Tous les scripts doivent être rendus exécutables (`chmod u+x`).
+* **Interpreter:** Scripts written exclusively for `bash` (tested and validated on Ubuntu 20.04 LTS).
+* **Formatting:** Standard `#!/bin/bash` shebang required on the very first line; all files must end with a new line.
+* **Executability:** All scripts must be made executable (`chmod u+x`).
 
-## 📁 Liste des Fichiers & Tâches
+## 📁 File List & Tasks
 
-| Fichier | Commande / Outil | Description |
+| File | Command / Tool | Description |
 | :--- | :--- | :--- |
-| `0-hello_world` | `echo` | Affiche "Hello, World", suivi d'une nouvelle ligne. |
-| `1-confused_smiley` | `echo` / Échappement | Affiche une émoticône confuse `"(ˆ_ˆ)"` contenant des caractères spéciaux. |
-| `2-hellofile` | `cat` | Affiche le contenu du fichier `/etc/passwd`. |
-| `3-twofiles` | `cat` | Affiche le contenu de deux fichiers distincts passés en paramètres. |
-| `4-lastlines` | `tail` | Affiche les 10 dernières lignes du fichier `/etc/passwd`. |
-| `5-firstlines` | `head` | Affiche les 10 premières lignes du fichier `/etc/passwd`. |
-| `6-third_line` | `head` / `tail` / `|` | Affiche la troisième ligne du fichier `iacta`. |
-| `7-file` | `echo` / `>` | Crée un fichier nommé `\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)` contenant le texte `Best School`. |
-| `8-cwd_state` | `ls` / `>` | Écrit le résultat de la commande `ls -la` dans un fichier nommé `ls_cwd_content`. |
-| `9-duplicate_last_line` | `tail` / `>>` | Duplique la dernière ligne du fichier `iacta` et l'ajoute à la fin de ce même fichier. |
-| `10-no_more_js` | `rm` / `find` | Supprime tous les fichiers réguliers se terminant par `.js` dans le répertoire courant et ses sous-dossiers. |
-| `11-directories` | `find` / `wc` | Compte le nombre de répertoires et sous-répertoires dans le dossier courant (excluant `.`). |
-| `12-newest_files` | `ls` / `head` | Affiche les 10 fichiers les plus récents du répertoire courant, triés par date de modification. |
-| `13-unique` | `sort` / `uniq` | Prend une liste de mots en entrée et affiche uniquement les mots uniques (triés). |
-| `14-findthatword` | `grep` | Cherche et affiche toutes les lignes contenant la chaîne de caractères "root" dans le fichier `/etc/passwd`. |
-| `15-countthatword` | `grep` / `wc` | Compte le nombre de lignes contenant la chaîne de caractères "bin" dans le fichier `/etc/passwd`. |
-| `16-whatsnext` | `grep` | Affiche les lignes contenant "root" ainsi que les 3 lignes suivantes dans `/etc/passwd`. |
-| `17-hidethatword` | `grep -v` | Affiche toutes les lignes du fichier `/etc/passwd` qui ne contiennent pas la chaîne "bin". |
-| `18-letteronly` | `grep` | Affiche toutes les lignes de `/etc/passwd` commençant par une lettre de l'alphabet. |
-| `19-AZ` | `tr` | Remplace toutes les lettres majuscules d'un flux par des minuscules (ou inversement). |
-| `20-hi` | `tr` | Supprime toutes les occurrences des lettres `c` et `C` d'une entrée. |
-| `21-reverse` | `rev` | Inverse l'ordre des caractères de chaque ligne lue sur l'entrée standard. |
-| `22-users_and_homes` | `cut` | Extrait et affiche les noms d'utilisateurs et leurs répertoires personnels depuis `/etc/passwd` (triés par ordre alphabétique). |
+| `0-hello_world` | `echo` | Prints "Hello, World", followed by a new line. |
+| `1-confused_smiley` | `echo` / Escaping | Prints a confused smiley `"(ˆ_ˆ)"` containing special characters. |
+| `2-hellofile` | `cat` | Displays the content of the `/etc/passwd` file. |
+| `3-twofiles` | `cat` | Displays the content of two distinct files passed as parameters. |
+| `4-lastlines` | `tail` | Displays the last 10 lines of the `/etc/passwd` file. |
+| `5-firstlines` | `head` | Displays the first 10 lines of the `/etc/passwd` file. |
+| `6-third_line` | `head` / `tail` / `|` | Displays the third line of the file `iacta`. |
+| `7-file` | `echo` / `>` | Creates a file named `\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)` containing the text `Best School`. |
+| `8-cwd_state` | `ls` / `>` | Writes the result of the `ls -la` command into a file named `ls_cwd_content`. |
+| `9-duplicate_last_line` | `tail` / `>>` | Duplicates the last line of the file `iacta` and appends it to the end of the same file. |
+| `10-no_more_js` | `rm` / `find` | Deletes all regular files with a `.js` extension in the current directory and its subfolders. |
+| `11-directories` | `find` / `wc` | Counts the number of directories and subdirectories in the current directory (excluding `.`). |
+| `12-newest_files` | `ls` / `head` | Displays the 10 newest files in the current directory, sorted by modification date. |
+| `13-unique` | `sort` / `uniq` | Takes a list of words as input and prints only unique words (sorted). |
+| `14-findthatword` | `grep` | Searches and displays all lines containing the string "root" in the `/etc/passwd` file. |
+| `15-countthatword` | `grep` / `wc` | Counts the number of lines containing the string "bin" in the `/etc/passwd` file. |
+| `16-whatsnext` | `grep` | Displays lines containing "root" along with the 3 following lines in `/etc/passwd`. |
+| `17-hidethatword` | `grep -v` | Displays all lines in the `/etc/passwd` file that do not contain the string "bin". |
+| `18-letteronly` | `grep` | Displays all lines of `/etc/passwd` starting with a letter of the alphabet. |
+| `19-AZ` | `tr` | Replaces all uppercase letters in a stream with lowercase letters (or vice versa). |
+| `20-hi` | `tr` | Removes all occurrences of the letters `c` and `C` from an input. |
+| `21-reverse` | `rev` | Reverses the character order of each line read from standard input. |
+| `22-users_and_homes` | `cut` | Extracts and displays usernames and their home directories from `/etc/passwd` (sorted alphabetically). |
 
-## 🚀 Utilisation
+## 🚀 Usage
 
-Pour exécuter un script nécessitant de filtrer un flux :
+To execute a script that requires filtering a stream:
 
 ```bash
 chmod u+x 14-findthatword

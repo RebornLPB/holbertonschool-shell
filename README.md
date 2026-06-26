@@ -1,37 +1,37 @@
 # Holberton School - System Engineering & DevOps: Shell
 
-Ce dépôt rassemble l'ensemble des projets dédiés à la maîtrise du système d'exploitation Unix, de la ligne de commande et des scripts Bash, réalisés dans le cadre du cursus **Holberton School**. L'objectif est d'acquérir les fondations essentielles en ingénierie système et pratiques DevOps.
+This repository centralizes all projects dedicated to mastering the Unix operating system, the command-line interface, and Bash scripting, completed as part of the **Holberton School** curriculum. The primary goal is to establish essential foundations in system engineering and DevOps practices.
 
-## 📝 Présentation du Cursus Shell
+## 📝 Shell Curriculum Overview
 
-Le parcours est conçu pour transformer la manipulation du terminal en un outil d'automatisation puissant à travers trois grands axes :
-* **Navigation et Fondations :** Comprendre l'arborescence Unix et la gestion rigoureuse des fichiers.
-* **Flux et Filtrage :** Maîtriser les redirections d'entrées/sorties et le traitement de données textuelles à la volée.
-* **Environnement et Sécurité :** Configurer les variables système et gérer finement les droits d'accès multi-utilisateurs.
+The pathway is designed to transform terminal manipulation into a powerful automation tool through three major axes:
+* **Navigation & Foundations:** Understanding the Unix directory tree and rigorous file management.
+* **I/O Streams & Filtering:** Mastering input/output redirections and on-the-fly text data processing.
+* **Environment & Security:** Configuring system variables and finely tuning multi-user access permissions.
 
-## 🛠️ Exigences & Contraintes Générales
+## 🛠️ Requirements & General Constraints
 
-Chaque script inclus dans ce dépôt respecte les standards stricts de l'école :
-* **Environnement :** Testé et validé sur Ubuntu 20.04 LTS.
-* **Shebang :** La première ligne de chaque script est exactement `#!/bin/bash`.
-* **Format :** Tous les fichiers se terminent par un retour à la ligne (`\n`) et sont exempts de commentaires superflus.
-* **Exécutabilité :** Tous les scripts sont rendus exécutables via la commande `chmod u+x`.
+Every script included in this repository strictly adheres to the school's high standards:
+* **Environment:** Tested and validated on Ubuntu 20.04 LTS.
+* **Shebang:** The first line of every script is exactly `#!/bin/bash`.
+* **Formatting:** All files must end with a new line (`\n`) and remain free of unnecessary comments.
+* **Executability:** All scripts are made executable using the `chmod u+x` command.
 
-## 📁 Structure du Dépôt
+## 📁 Repository Structure
 
-Le dépôt est organisé en modules spécifiques, chacun ciblant une compétence clé du Shell :
+The repository is organized into specific modules, each targeting a core Shell competency:
 
-| Répertoire | Description | Concepts Clés |
+| Directory | Description | Key Concepts |
 | :--- | :--- | :--- |
-| `basics` | Manipulation de base du système | `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `rm` |
-| `io_redirections_and_filters` | Gestion des flux et filtres de texte | `>`, `>>`, `\|`, `grep`, `sed`, `awk`, `head`, `tail` |
-| `init_files_variables_and_expansions` | Configuration et arithmétique | `~/.bashrc`, `export`, expansions `$((...))`, alias |
-| `permissions` | Sécurité et droits d'accès | `chmod`, `chown`, `chgrp`, notation octale vs symbolique |
+| `basics` | Core system manipulation | `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `rm` |
+| `io_redirections_and_filters` | Stream management and text filters | `>`, `>>`, `\|`, `grep`, `sed`, `awk`, `head`, `tail` |
+| `init_files_variables_and_expansions` | Initialization files, configuration & arithmetic | `~/.bashrc`, `export`, `$((...))` expansions, aliases |
+| `permissions` | Security and access rights | `chmod`, `chown`, `chgrp`, octal vs. symbolic notation |
 
 ---
 
-## 🚀 Guide Rapide
+## 🚀 Quick Start Guide
 
-### Rendre un script exécutable
+### Making a script executable
 ```bash
-chmod u+x <nom_du_dossier>/<nom_du_script>
+chmod u+x <directory_name>/<script_name>
