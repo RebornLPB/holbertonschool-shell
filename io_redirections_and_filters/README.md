@@ -36,10 +36,10 @@ This project is dedicated to mastering standard inputs and outputs in Unix, redi
 | `14-findthatword` | `grep` | Searches and displays all lines containing the string "root" in the `/etc/passwd` file. |
 | `15-countthatword` | `grep` / `wc` | Counts the number of lines containing the string "bin" in the `/etc/passwd` file. |
 | `16-whatsnext` | `grep` | Displays lines containing "root" along with the 3 following lines in `/etc/passwd`. |
-| `17-hidethatword` | `grep -v` | Displays all lines in the `/etc/passwd` file that do not contain the string "bin". |
+| `17-hidethisword` | `grep -v` | Displays all lines in the `/etc/passwd` file that do not contain the string "bin". |
 | `18-letteronly` | `grep` | Displays all lines of `/etc/passwd` starting with a letter of the alphabet. |
 | `19-AZ` | `tr` | Replaces all uppercase letters in a stream with lowercase letters (or vice versa). |
-| `20-hi` | `tr` | Removes all occurrences of the letters `c` and `C` from an input. |
+| `20-hiago` | `tr` | Removes all occurrences of the letters `c` and `C` from an input. |
 | `21-reverse` | `rev` | Reverses the character order of each line read from standard input. |
 | `22-users_and_homes` | `cut` | Extracts and displays usernames and their home directories from `/etc/passwd` (sorted alphabetically). |
 
@@ -50,3 +50,4 @@ To execute a script that requires filtering a stream:
 ```bash
 chmod u+x 14-findthatword
 ./14-findthatword
+```

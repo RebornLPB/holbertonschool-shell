@@ -29,10 +29,10 @@ This project explores the configuration of the Shell environment, the creation a
 | `7-create_global_variable` | `export` | Creates a new environment variable named `BEST` with the value `School`. |
 | `8-true_knowledge` | Arithmetic expansion | Divise the `TRUE_KNOWLEDGE` variable by 128 and prints the result using `$((...))`. |
 | `9-divide_and_rule` | Arithmetic expansion | Prints the result of the division of `POWER` by `DIVIDE`. |
-| `10-love_exponent_the_stars` | Power | Prints the result of `BREATH` raised to the power of `LOVE`. |
+| `10-love_exponent_breath` | Power | Prints the result of `BREATH` raised to the power of `LOVE`. |
 | `11-binary_to_decimal` | Base conversion | Converts a binary number stored in `BINARY` into base 10. |
 | `12-combinations` | Brace expansion | Displays all possible combinations of two letters from `a` to `z`, excluding `oo`. |
-| `13-print_float` | `printf` | Prints a floating-point number stored in `NUM` with exactly two decimal places. |
+| `14-decimal_to_hexadecimal` | `printf` | Prints the hexadecimal representation of the number stored in `DECIMAL`. |
 
 ## 🚀 Usage
 
@@ -41,3 +41,4 @@ To test a script that manipulates variables:
 ```bash
 chmod u+x 7-create_global_variable
 ./7-create_global_variable
+```

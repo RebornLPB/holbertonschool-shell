@@ -33,6 +33,9 @@ This project is dedicated to understanding and managing file and directory acces
 | `11-directories_permissions` | `chmod -R` | Adds read permission to all subdirectories of the current directory for everyone. |
 | `12-directory_permissions` | `mkdir -m` | Creates a directory named `my_dir` with permissions set to `751` in a single command. |
 | `13-change_group` | `chgrp` | Changes the group ownership of the file `hello` to `school`. |
+| `14-change_owner_and_group` | `chown -R` | Changes the owner to `vincent` and the group to `staff` of all files and directories in the working directory, recursively. |
+| `15-symbolic_link_permissions` | `chown -h` | Changes the owner and group of the symbolic link `_hello` to `vincent` and `staff` (the link itself, not its target). |
+| `16-if_only` | `chown --from` | Changes the owner of the file `hello` to `vincent`, only if it is currently owned by `guillaume`. |
 
 ## 🚀 Usage
 
@@ -41,3 +44,4 @@ Example of how to make a permission script executable and run it:
 ```bash
 chmod u+x 5-execute
 ./5-execute
+```

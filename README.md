@@ -35,3 +35,4 @@ The repository is organized into specific modules, each targeting a core Shell c
 ### Making a script executable
 ```bash
 chmod u+x <directory_name>/<script_name>
+```
